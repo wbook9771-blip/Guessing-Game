@@ -1,11 +1,17 @@
-# Guessing Game
+import random
 
-Language: Python
+secret_number = random.randint(1, 100)
 
-Description: A simple console-based number guessing game.
+print("🎯 Guessing Game")
+print("I have selected a number between 1 and 100.")
 
-## How to Run
+while True:
+    guess = int(input("Enter your guess: "))
 
-Run the program using:
-
-python guessing_game.py
+    if guess < secret_number:
+        print("Too Low! Try again.")
+    elif guess > secret_number:
+        print("Too High! Try again.")
+    else:
+        print("Correct! 🎉 You guessed the number!")
+        break
